@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Gym Template" />
+  <meta name="keywords" content="Gym, unica, creative, html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Zest Trainer Profile</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet" />
+
+  <!-- Css Styles -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/flaticon.css" type="text/css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/barfiller.css" type="text/css" />
+  <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+  <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <!-- Page Preloder -->
+  <div id="preloder">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Offcanvas Menu Section Begin -->
+  <div class="offcanvas-menu-overlay"></div>
+  <div class="offcanvas-menu-wrapper">
+    <div class="canvas-close">
+      <i class="fa fa-close"></i>
+    </div>
+    <div class="canvas-search search-switch">
+      <i class="fa fa-search"></i>
+    </div>
+    <nav class="canvas-menu mobile-menu">
+      <ul>
+        <li><a href="Tindex.html">Home</a></li>
+        <li><a href="Tattendance.html">Attendance</a></li>
+        <li>
+          <a href="#">Activities</a>
+          <ul class="dropdown">
+            <li><a href="Tclass-timetable.html">Schedules</a></li>
+            <li><a href="Tactivities.html">My Activities</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Workout</a>
+          <ul class="dropdown">
+            <li><a href="Tvideo.html">Video Tutorial</a></li>
+          </ul>
+        </li>
+        <li><a href="Tprofile.html"> Profile </a></li>
+      </ul>
+    </nav>
+    <div id="mobile-menu-wrap"></div>
+  </div>
+  <!-- Offcanvas Menu Section End -->
+
+  <!-- Header Section Begin -->
+  <header class="header-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="logo">
+            <a href="./index.html">
+              <img src="img/logo.png" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <nav class="nav-menu">
+            <ul>
+              <li><a href="Tindex.html">Home</a></li>
+              <li><a href="Tattendance.html">Attendance</a></li>
+              <li>
+                <a href="#">Activities</a>
+                <ul class="dropdown">
+                  <li><a href="Tclass-timetable.html">Schedules</a></li>
+                  <li><a href="Tactivities.html">My Activities</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Workout</a>
+                <ul class="dropdown">
+                  <li><a href="Tvideo.html">Video Tutorial</a></li>
+                </ul>
+              </li>
+              <li><a href="Tprofile.html"> Profile </a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-lg-3">
+          <div class="top-option">
+            <div class="to-search search-switch">
+              <i class="fa fa-search"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="canvas-open">
+        <i class="fa fa-bars"></i>
+      </div>
+    </div>
+  </header>
+  <!-- Header End -->
+
+  <!-- Breadcrumb Section Begin -->
+  <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb-bg.jpg">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="breadcrumb-text">
+            <h2>Profile</h2>
+            <div class="bt-option">
+              <a href="index.html">Home</a>
+              <a href="#">Pages</a>
+              <span>Profile</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Breadcrumb Section End -->
+
+  <!-- Profile Section Begin -->
+  <section class="profile-section spad">
+    <div class="container mx-auto py-8">
+      <div class="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4 mt-6">
+        <!-- Profile Card -->
+        <div class="col-span-4 sm:col-span-3">
+          <div class="bg-white shadow rounded-lg p-6 h-full">
+            <div class="flex flex-col items-center">
+              <img src="https://randomuser.me/api/portraits/men/94.jpg"
+                class="w-32 h-32 bg-gray-300 rounded-full mb-4" />
+              <h1 class="text-xl font-bold">John Doe</h1>
+              <p class="text-gray-700 mt-2">Zest Gym Trainer</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="col-span-4 sm:col-span-9">
+          <div class="bg-white shadow rounded-lg p-6 h-full">
+            <div class="flex space-x-6 border-b-2 mb-6">
+              <button id="profileTab" class="text-gray-700 py-2 px-4 focus:outline-none">
+                Profile
+              </button>
+              <button id="gymTab" class="text-gray-700 py-2 px-4 focus:outline-none">
+                Gym Activities
+              </button>
+            </div>
+
+            <!-- Profile Section -->
+            <div id="profileSection" class="p-3">
+              <h2 class="text-xl font-bold mb-4">Personal Information</h2>
+              <div class="mb-4">
+                <p class="font-semibold text-gray-700">Name:</p>
+                <p class="text-gray-700">John Doe</p>
+              </div>
+              <div class="mb-4">
+                <p class="font-semibold text-gray-700">Address:</p>
+                <p class="text-gray-700">1234 Main Street, Anytown, USA</p>
+              </div>
+              <div class="mb-4">
+                <p class="font-semibold text-gray-700">Email:</p>
+                <p class="text-gray-700">johndoe@example.com</p>
+              </div>
+              <div class="mb-4">
+                <p class="font-semibold text-gray-700">Contact:</p>
+                <p class="text-gray-700">+1 234 567 890</p>
+              </div>
+
+              <div class="mt-6 flex justify-center items-center gap-6 flex-wrap">
+                <a href="TeditProfile.html"
+                  class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded transition-all">
+                  Edit Profile
+                </a>
+              </div>
+            </div>
+
+            <!-- Gym Activities Section (Hidden by default) -->
+            <div id="gymSection" class="hidden">
+              <h2 class="text-xl font-bold mb-4">Gym Activities</h2>
+              <p class="text-gray-700">Push-ups, Squats, Running</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Profile Section End -->
+
+  <!-- Footer Section Begin -->
+  <section class="footer-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="fs-about">
+            <div class="fa-logo">
+              <a href="#"><img src="img/logo.png" alt="" /></a>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore dolore magna aliqua endisse
+              ultrices gravida lorem.
+            </p>
+            <div class="fa-social">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-youtube-play"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+              <a href="#"><i class="fa fa-envelope-o"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6">
+          <div class="fs-widget">
+            <h4>Useful links</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Classes</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6">
+          <div class="fs-widget">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">Login</a></li>
+              <li><a href="#">My account</a></li>
+              <li><a href="#">Subscribe</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="fs-widget">
+            <h4>Tips & Guides</h4>
+            <div class="fw-recent">
+              <h6>
+                <a href="#">Physical fitness may help prevent depression, anxiety</a>
+              </h6>
+              <ul>
+                <li>3 min read</li>
+                <li>20 Comment</li>
+              </ul>
+            </div>
+            <div class="fw-recent">
+              <h6>
+                <a href="#">Fitness: The best exercise to lose belly fat and tone
+                  up...</a>
+              </h6>
+              <ul>
+                <li>3 min read</li>
+                <li>20 Comment</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer Section End -->
+
+  <!-- Js Plugins -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/masonry.pkgd.min.js"></script>
+  <script src="js/jquery.barfiller.js"></script>
+  <script src="js/jquery.slicknav.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Get tab buttons and content sections
+    const profileTab = document.getElementById("profileTab");
+    const gymTab = document.getElementById("gymTab");
+    const profileSection = document.getElementById("profileSection");
+    const gymSection = document.getElementById("gymSection");
+
+    // Add event listeners to switch between tabs
+    profileTab.addEventListener("click", () => {
+      profileSection.classList.remove("hidden");
+      gymSection.classList.add("hidden");
+      profileTab.classList.add("border-b-2", "border-blue-500");
+      gymTab.classList.remove("border-b-2", "border-blue-500");
+    });
+
+    gymTab.addEventListener("click", () => {
+      gymSection.classList.remove("hidden");
+      profileSection.classList.add("hidden");
+      gymTab.classList.add("border-b-2", "border-blue-500");
+      profileTab.classList.remove("border-b-2", "border-blue-500");
+    });
+
+    // Set default active tab
+    profileTab.classList.add("border-b-2", "border-blue-500");
+  </script>
+</body>
+
+</html>

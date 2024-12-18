@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Gym Template" />
+  <meta name="keywords" content="Gym, unica, creative, html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Zest Attendance</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet" />
+
+  <!-- Css Styles -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/flaticon.css" type="text/css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/barfiller.css" type="text/css" />
+  <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+  <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <style>
+    .attendance-info {
+      margin-top: 10px;
+      width: 65%;
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .attendance-info h3 {
+      font-size: 22px;
+      color: black;
+    }
+
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 10px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .calendar div {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .calendar div.disabled {
+      background-color: #f1f1f1;
+      cursor: not-allowed;
+    }
+
+    .calendar div.checked {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .calendar div.checked:before {
+      content: "\2713";
+      /* Unicode checkmark */
+      color: white;
+    }
+
+    .attendance-info {
+      background-color: #f7f7f7;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .attendance-info h3 {
+      margin-bottom: 15px;
+    }
+
+    .attendance-btn {
+      display: block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .attendance-btn:hover {
+      background-color: #45a049;
+    }
+
+    .section-title h2 {
+      margin-bottom: 10px;
+    }
+
+    .calendar {
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .toast {
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Page Preloader -->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Offcanvas Menu Section Begin -->
+  <div class="offcanvas-menu-overlay"></div>
+  <div class="offcanvas-menu-wrapper">
+    <div class="canvas-close">
+      <i class="fa fa-close"></i>
+    </div>
+    <div class="canvas-search search-switch">
+      <i class="fa fa-search"></i>
+    </div>
+    <nav class="canvas-menu mobile-menu">
+      <ul>
+        <li><a href="Tindex.html">Home</a></li>
+        <li><a href="Tattendance.html">Attendance</a></li>
+        <li>
+          <a href="#">Activities</a>
+          <ul class="dropdown">
+            <li><a href="Tclass-timetable.html">Schedules</a></li>
+            <li><a href="Tactivities.html">My Activities</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Workout</a>
+          <ul class="dropdown">
+            <li><a href="Tvideo.html">Video Tutorial</a></li>
+          </ul>
+        </li>
+        <li><a href="Tprofile.html"> Profile </a></li>
+      </ul>
+    </nav>
+    <div id="mobile-menu-wrap"></div>
+  </div>
+  <!-- Offcanvas Menu Section End -->
+
+  <!-- Header Section Begin -->
+  <header class="header-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="logo">
+            <a href="./index.html">
+              <img src="img/logo.png" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <nav class="nav-menu">
+            <ul>
+              <li><a href="Tindex.html">Home</a></li>
+              <li><a href="Tattendance.html">Attendance</a></li>
+              <li>
+                <a href="#">Activities</a>
+                <ul class="dropdown">
+                  <li><a href="Tclass-timetable.html">Schedules</a></li>
+                  <li><a href="Tactivities.html">My Activities</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Workout</a>
+                <ul class="dropdown">
+                  <li><a href="Tvideo.html">Video Tutorial</a></li>
+                </ul>
+              </li>
+              <li><a href="Tprofile.html"> Profile </a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-lg-3">
+          <div class="top-option">
+            <div class="to-search search-switch">
+              <i class="fa fa-search"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="canvas-open">
+        <i class="fa fa-bars"></i>
+      </div>
+    </div>
+  </header>
+  <!-- Header End -->
+
+  <!-- Breadcrumb Section Begin -->
+  <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb-bg.jpg">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="breadcrumb-text">
+            <h2>Please Check In Here</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Breadcrumb Section End -->
+
+  <div class="container">
+    <div class="row attendance-wrapper mt-5 mb-5">
+      <!-- Attendance Info Section -->
+      <div class="col-lg-5">
+        <div class="attendance-info">
+          <h3>Attendance Information</h3>
+          <p>
+            <strong>Total Check-ins:</strong>
+            <span id="totalCheckins">0</span> days
+          </p>
+          <p><strong>Streak:</strong> <span id="streak">0</span> days</p>
+          <p>
+            <strong>Absent Days:</strong> <span id="absentDays">0</span> days
+          </p>
+          <button class="attendance-btn" id="checkInBtn">Check In</button>
+        </div>
+      </div>
+
+      <!-- Calendar Section -->
+      <div class="col-lg-7">
+        <div class="section-title">
+          <h2 style="color: black">Calendar</h2>
+          <span>Please Click on Today's Date to Check In</span>
+        </div>
+
+        <!-- Message Section -->
+        <div id="checkinMessage" style="color: red; margin-bottom: 20px; font-weight: bold"></div>
+
+        <div id="calendar" class="calendar"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Get In Touch Section Begin -->
+  <div class="gettouch-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="gt-text">
+            <i class="fa fa-map-marker"></i>
+            <p>
+              333 Middle Winchendon Rd, Rindge,<br />
+              NH 03461
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="gt-text">
+            <i class="fa fa-mobile"></i>
+            <ul>
+              <li>125-711-811</li>
+              <li>125-668-886</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="gt-text email">
+            <i class="fa fa-envelope"></i>
+            <p>Support.gymcenter@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Get In Touch Section End -->
+
+  <!-- Footer Section Begin -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-sm-6">
+          <div class="fs-about">
+            <div class="fa-logo">
+              <a href="#"><img src="img/logo.png" alt="" /></a>
+            </div>
+            <p>
+              We aim to provide our clients with the most comprehensive and
+              up-to-date physical fitness and nutrition programs. Join us and
+              start your journey to a healthier life today!
+            </p>
+            <div class="fa-social">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-youtube-play"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+          <div class="fs-widget">
+            <h4>Useful links</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Classes</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+          <div class="fs-widget">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">Login</a></li>
+              <li><a href="#">My account</a></li>
+              <li><a href="#">Subscribe</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+          <div class="fs-widget">
+            <h4>Popular</h4>
+            <ul>
+              <li><a href="#">Gym</a></li>
+              <li><a href="#">Crossfit</a></li>
+              <li><a href="#">Cardio</a></li>
+              <li><a href="#">Zumba</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="fs-widget">
+            <h4>Newsletter</h4>
+            <p>
+              Subscribe to our newsletter for the latest updates and offers.
+            </p>
+            <form action="#" class="subscribe-form">
+              <input type="text" placeholder="Email address" />
+              <button type="submit"><i class="fa fa-send"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer Section End -->
+
+  <script>// Get the current date
+    const currentDate = new Date();
+    const currentDateString = currentDate.toISOString().split("T")[0]; // Format: YYYY-MM-DD
+
+    // Store the check-in data (can be replaced with server-side storage in real apps)
+    let checkins = [];
+
+    // Initialize the calendar with the current date and other days disabled
+    function initializeCalendar() {
+      const calendar = document.getElementById("calendar");
+
+      // Get current month and year
+      const month = currentDate.getMonth();
+      const year = currentDate.getFullYear();
+
+      // Create the calendar days for the current month
+      const firstDay = new Date(year, month, 1).getDay(); // Day of the week the month starts on
+      const lastDate = new Date(year, month + 1, 0).getDate(); // Last date of the month
+
+      // Clear any existing calendar cells
+      calendar.innerHTML = "";
+
+      // Add empty cells before the first day
+      for (let i = 0; i < firstDay; i++) {
+        const emptyCell = document.createElement("div");
+        calendar.appendChild(emptyCell);
+      }
+
+      // Add day cells to the calendar
+      for (let day = 1; day <= lastDate; day++) {
+        const dayCell = document.createElement("div");
+        dayCell.textContent = day;
+        dayCell.setAttribute("data-date", `${year}-${month + 1}-${day}`);
+        calendar.appendChild(dayCell);
+
+        // If it's today, highlight it and add a listener for check-in
+        if (day === currentDate.getDate()) {
+          dayCell.classList.add("today");
+          dayCell.addEventListener("click", () => handleCheckIn(dayCell.getAttribute("data-date")));
+        }
+      }
+    }
+
+    // Handle the check-in functionality
+    function handleCheckIn(date) {
+      // Check if the date is today
+      if (date !== currentDateString) {
+        document.getElementById("checkinMessage").textContent = "You can only check in for today!";
+        return;
+      }
+
+      // Check if already checked in
+      if (checkins.includes(date)) {
+        document.getElementById("checkinMessage").textContent = "You have already checked in for today!";
+        return;
+      }
+
+      // Clear any previous message
+      document.getElementById("checkinMessage").textContent = "";
+
+      // Record the check-in for today
+      checkins.push(date);
+      document.getElementById("totalCheckins").textContent = checkins.length;
+      updateAttendanceDisplay();
+      showCheckInToast();
+    }
+
+    // Update the display with attendance info
+    function updateAttendanceDisplay() {
+      const streak = calculateStreak();
+      document.getElementById("streak").textContent = streak;
+      document.getElementById("absentDays").textContent = checkins.length ? 0 : 1;
+    }
+
+    // Calculate streak
+    function calculateStreak() {
+      let streak = 0;
+      let currentDate = new Date();
+
+      for (let i = 0; i < checkins.length; i++) {
+        const checkInDate = new Date(checkins[i]);
+        if (checkInDate.setHours(0, 0, 0, 0) === currentDate.setHours(0, 0, 0, 0) - streak * 24 * 60 * 60 * 1000) {
+          streak++;
+        } else {
+          break;
+        }
+      }
+      return streak;
+    }
+
+    // Show toast notification
+    function showCheckInToast() {
+      const toast = document.getElementById("checkinToast");
+      const toastBody = toast.querySelector(".toast-body");
+
+      toastBody.innerHTML = `
+        <p>You have successfully checked in!</p>
+        <p><strong>Streak:</strong> ${document.getElementById("streak").textContent} days</p>
+        <p><strong>Absent Days:</strong> ${document.getElementById("absentDays").textContent} days</p>
+        <p><strong>Total Check-Ins:</strong> ${document.getElementById("totalCheckins").textContent} days</p>
+      `;
+
+      $(toast).toast("show");
+    }
+
+    // Initialize calendar when page loads
+    window.onload = initializeCalendar;
+  </script>
+
+  <!-- Js Plugins -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/masonry.pkgd.min.js"></script>
+  <script src="js/jquery.barfiller.js"></script>
+  <script src="js/jquery.slicknav.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
